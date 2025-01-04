@@ -25,10 +25,10 @@ USER_FILE = "users.txt"
 # Cooldowns and binaries for each attack
 attack_cooldowns = {
     'attack1': {'cooldown': 240, 'last_used': None, 'binary': 'sharp'},
-    'attack2': {'cooldown': 130, 'last_used': None, 'binary': 'soul1'},
-    'attack3': {'cooldown': 110, 'last_used': None, 'binary': 'soul'},
-    'attack4': {'cooldown': 110, 'last_used': None, 'binary': 'soul2'},
-    'attack5': {'cooldown': 110, 'last_used': None, 'binary': 'soul3'}
+    'attack2': {'cooldown': 130, 'last_used': None, 'binary': 'sharp1'},
+    'attack3': {'cooldown': 110, 'last_used': None, 'binary': 'sharp2'},
+    'attack4': {'cooldown': 110, 'last_used': None, 'binary': 'sharp3'},
+    'attack5': {'cooldown': 110, 'last_used': None, 'binary': 'sharp4'}
 }
 
 # Global variables
